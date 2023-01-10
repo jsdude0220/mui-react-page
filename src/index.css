@@ -1,0 +1,46 @@
+.MuiTablePagination-spacer {
+  flex: none !important;
+}
+
+.MuiTablePagination-toolbar {
+  padding-left: 16px !important;
+}
+
+.MuiTabs-root .Mui-selected {
+  color: #00C389 !important;
+}
+
+.tag-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: flex-start;
+  align-items: center;
+  padding: 0px 12px 40px 12px;
+}
+
+.tag-element {
+  padding: 2px 12px;
+  border-radius: 12px;
+  margin: 16px 16px 0px 0px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upload-btn {
+  background: #00C389;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
