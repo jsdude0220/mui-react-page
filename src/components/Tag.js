@@ -7,8 +7,8 @@ export const Tag = ({
     <div
       className='tag-element'
       style={{
-        color: selectedIndex === item.id ? 'white' : '#6b7280',
-        background: selectedIndex === item.id ? '#00C389' : '#f3f4f6',
+        color: selectedIndex === item.id ? '#00C389' : 'rgba(27,34,52,0.87)',
+        background: selectedIndex === item.id ? '#00C38920' : '#00000010',
       }}
       onClick={() => onChange(item.id)}
     >

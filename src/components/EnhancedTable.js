@@ -16,6 +16,8 @@ import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
 import { visuallyHidden } from '@mui/utils';
 import Divider from '@mui/material/Divider';
+import AddIcon from '@mui/icons-material/Add';
+import FolderIcon from '@mui/icons-material/Folder';
 import { Tag } from './Tag';
 
 function createData(name, date, tag, status) {
@@ -43,6 +45,9 @@ const TagsProps = [
   { id: 5, title: 'Quickfund', val: 0 },
   { id: 6, title: 'Tax', val: 5 },
   { id: 7, title: 'Assistance/Grants', val: 10 },
+  { id: 8, title: 'Payroll/Employee', val: 7 },
+  { id: 9, title: 'Expenditures', val: 4 },
+  { id: 10, title: 'Quickbooks', val: 10 },
 ]
 
 function descendingComparator(a, b, orderBy) {
@@ -166,17 +171,20 @@ function EnhancedTableToolbar(props) {
   return (
     <Toolbar
       sx={{
+        flex: 'row',
+        justifyContent: 'space-between',
+        pt: 3,
         pl: { sm: 2 },
-        pr: { xs: 1, sm: 1 },
+        pr: { sm: 4 },
         ...(numSelected > 0 && {
           bgcolor: (theme) =>
             alpha(theme.palette.primary.main, theme.palette.action.activatedOpacity),
         }),
       }}
+      className="table-toolbar"
     >
       {numSelected > 0 ? (
         <Typography
-          sx={{ flex: '1 1 100%' }}
           color="inherit"
           variant="subtitle1"
           component="div"
@@ -185,7 +193,6 @@ function EnhancedTableToolbar(props) {
         </Typography>
       ) : (
         <Typography
-          sx={{ flex: '1 1 100%' }}
           variant="h6"
           id="tableTitle"
           component="div"
@@ -193,6 +200,10 @@ function EnhancedTableToolbar(props) {
           All Documents
         </Typography>
       )}
+      <div className='table-header-container'>
+        <AddIcon style={{ marginRight: 5 }} />
+        ADD TAG
+      </div>
     </Toolbar>
   );
 }
@@ -276,6 +287,7 @@ export default function EnhancedTable() {
           page={page}
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
+          style={{ marginBottom: 16 }}
         />
         <Divider />
         <Typography sx={{ padding: '20px 0px 0px 12px' }}>
@@ -338,11 +350,24 @@ export default function EnhancedTable() {
                         scope="row"
                         padding="none"
                       >
-                        {row.name}
+                        <div className='name-container'>
+                          <div className='folder-container'>
+                            <FolderIcon style={{ color: 'white' }} />
+                          </div>
+                          {row.name}
+                        </div>
                       </TableCell>
                       <TableCell align="left">{row.date}</TableCell>
-                      <TableCell align="left">{row.tag}</TableCell>
-                      <TableCell align="left">{row.status}</TableCell>
+                      <TableCell align="left">
+                        <div className='tag-financial'>
+                          {row.tag}
+                        </div>
+                      </TableCell>
+                      <TableCell align="left">
+                        <div className='status-container'>
+                          {row.status}
+                        </div>
+                      </TableCell>
                     </TableRow>
                   );
                 })}

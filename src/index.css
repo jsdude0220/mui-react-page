@@ -10,6 +10,10 @@
   color: #00C389 !important;
 }
 
+.MuiToolbar-root.table-toolbar {
+  min-height: 30px !important;
+}
+
 .tag-container {
   width: 100%;
   display: flex;
@@ -20,10 +24,10 @@
 }
 
 .tag-element {
-  padding: 2px 12px;
-  border-radius: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
   margin: 16px 16px 0px 0px;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -37,10 +41,74 @@
 .upload-btn {
   background: #00C389;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 16px;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+.table-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: #00C389;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tag-financial {
+  width: 80px;
+  text-align: center;
+  background: #00C38920;
+  border-radius: 20px;
+  padding: 2px 10px;
+  color: #00C389;
+  font-size: 13px;
+}
+
+.status-container {
+  width: 80px;
+  text-align: center;
+  background: #00C389;
+  border-radius: 20px;
+  padding: 2px 10px;
+  color: white;
+  font-size: 13px;
+}
+
+.name-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.folder-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.2);
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.logo-container {
+  width: 48px;
+  height: 48px;
+  background: #3D3935;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.brief-icon {
+
+}
+
+.folder-icon {
+
 }
