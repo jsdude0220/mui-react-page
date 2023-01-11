@@ -34,7 +34,6 @@ const rows = [
   createData('Payroll2017.pdf', '24 Nov, 22', 'Financial', 'Complete'),
   createData('Payroll2018.pdf', '24 Nov, 22', 'Financial', 'Complete'),
   createData('Payroll2019.pdf', '24 Nov, 22', 'Financial', 'Complete'),
-  createData('Payroll2020.pdf', '24 Nov, 22', 'Financial', 'Complete')
 ];
 
 const TagsProps = [
@@ -173,7 +172,7 @@ function EnhancedTableToolbar(props) {
       sx={{
         flex: 'row',
         justifyContent: 'space-between',
-        pt: 3,
+        pt: 2,
         pl: { sm: 2 },
         pr: { sm: 4 },
         ...(numSelected > 0 && {
@@ -193,11 +192,11 @@ function EnhancedTableToolbar(props) {
         </Typography>
       ) : (
         <Typography
-          variant="h6"
+          style={{ fontSize: '20px' }}
           id="tableTitle"
           component="div"
         >
-          All Documents
+          All documents
         </Typography>
       )}
       <div className='table-header-container'>
@@ -279,7 +278,15 @@ export default function EnhancedTable() {
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <EnhancedTableToolbar numSelected={selected.length} />
-        <TablePagination
+        <div style={{
+          fontSize: 16,
+          color: '#777472',
+          paddingLeft: 16,
+          marginBottom: 24
+        }}>
+          Showing 1-16 out of 171
+        </div>
+        {/* <TablePagination
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
           count={rows.length}
@@ -288,9 +295,9 @@ export default function EnhancedTable() {
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
           style={{ marginBottom: 16 }}
-        />
+        /> */}
         <Divider />
-        <Typography sx={{ padding: '20px 0px 0px 12px' }}>
+        <Typography sx={{ padding: '16px 0px 0px 16px', fontSize: 14, color: '#777472' }}>
           TAGS
         </Typography>
         <div className='tag-container'>
@@ -303,7 +310,6 @@ export default function EnhancedTable() {
             />
           ))}
         </div>
-        <Divider />
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}

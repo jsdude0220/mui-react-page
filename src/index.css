@@ -20,11 +20,11 @@
   flex-wrap: nowrap;
   flex-direction: flex-start;
   align-items: center;
-  padding: 0px 12px 40px 12px;
+  padding: 0px 12px 20px 12px;
 }
 
 .tag-element {
-  padding: 5px 12px;
+  padding: 5px 16px;
   border-radius: 20px;
   margin: 16px 16px 0px 0px;
   font-size: 13px;
@@ -60,21 +60,21 @@
 }
 
 .tag-financial {
-  width: 80px;
+  width: 75px;
   text-align: center;
   background: #00C38920;
   border-radius: 20px;
-  padding: 2px 10px;
+  padding: 1px 0px;
   color: #00C389;
   font-size: 13px;
 }
 
 .status-container {
-  width: 80px;
+  width: 70px;
   text-align: center;
   background: #00C389;
   border-radius: 20px;
-  padding: 2px 10px;
+  padding: 1px 0px;
   color: white;
   font-size: 13px;
 }

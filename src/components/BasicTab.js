@@ -46,19 +46,19 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%', marginBottom: '50px' }}>
+    <Box sx={{ width: '100%', marginBottom: '40px' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs 
+        <Tabs
           TabIndicatorProps={{
             style: {
               backgroundColor: '#00C389',
             }
           }}
           value={value}
-          onChange={handleChange} 
+          onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="All" {...a11yProps(0)} />
+          <Tab style={{ minWidth: '30px' }} label="All" {...a11yProps(0)} />
           <Tab label="SELECT RANGE" {...a11yProps(1)} />
         </Tabs>
       </Box>

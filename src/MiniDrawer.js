@@ -128,7 +128,7 @@ export default function MiniDrawer() {
               noWrap
               component="div"
               color={'rgba(0, 0, 0, 0.54)'}
-              sx={{ mr: '50px' }}
+              sx={{ mr: '70px' }}
             >
               EN
             </Typography>
@@ -136,7 +136,7 @@ export default function MiniDrawer() {
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
-              sx={{ mr: '50px' }}
+              sx={{ mr: '70px' }}
             >
               <NotificationsIcon style={{ color: 'rgba(0, 0, 0, 0.54)' }} />
             </IconButton>
@@ -148,11 +148,11 @@ export default function MiniDrawer() {
         <DrawerHeader>
           <div className='logo-container' />
         </DrawerHeader>
-        <List sx={{ padding: '100px 0px' }}>
+        <List sx={{ padding: '60px 0px' }}>
           <ListItem disablePadding sx={{ display: 'block' }}>
             <ListItemButton
               sx={{
-                minHeight: 48,
+                minHeight: 60,
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
               }}
@@ -173,7 +173,7 @@ export default function MiniDrawer() {
           <ListItem disablePadding sx={{ display: 'block' }}>
             <ListItemButton
               sx={{
-                minHeight: 48,
+                minHeight: 60,
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
               }}
@@ -253,7 +253,7 @@ export default function MiniDrawer() {
           </ListItem>
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3, maxWidth: '1400px' }}>
+      <Box component="main" sx={{ flexGrow: 1, p: 3, maxWidth: '1488px' }}>
         <DrawerHeader />
         <div className='title-container'>
           <Typography variant='h4' sx={{ padding: '30px 0px' }}>
